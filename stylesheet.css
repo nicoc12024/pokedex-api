@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("Pokemon-bg.jpg") no-repeat top center/cover;
+  background: url("./pokemon-bg.jpg") no-repeat top center/cover;
 }
 
 #content-box {
