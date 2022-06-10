@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("/pokemon-bg.jpg") no-repeat top center/cover;
+}
+
+#content-box {
+  max-width: 500px;
+  max-height: 500px;
+  border: 10px solid lightgray;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 0.8rem;
+  background: url("/pokeball.jpg") no-repeat top center/cover;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(36, 36, 37, 0.977) 0px 7px 29px 0px;
+}
+
+/* Left side */
+.pokemon-info {
+  width: 250px;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.pokemon-info h2 {
+  color: white;
+}
+
+.pokemon-info > * {
+  margin-bottom: 1rem;
+}
+
+.pokemon-info .pokemon-img {
+  width: 100px;
+  background-color: aliceblue;
+  border: 1.5px solid black;
+  border-radius: 10px;
+}
+
+.pokemon-info .pokemon-description {
+  width: 200px;
+  background-color: aliceblue;
+  border: 1.5px solid black;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+/* Right side */
+.pokemon-list {
+  padding-top: 1rem;
+  margin: 0 auto;
+  overflow-y: auto;
+  width: 250px;
+}
+
+.pokemon-list .pokemon-name {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+  margin-bottom: 0.4rem;
+  width: 95%;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+
+.icon-scroll {
+  margin: 0 auto 2rem auto;
+  position: relative;
+  background-color: antiquewhite;
+}
+
+.icon-scroll:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #000000 transparent;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@media (min-width: 550px) {
+  #content-box {
+    flex-direction: row;
+  }
+  .icon-scroll {
+    display: none;
+  }
+}
