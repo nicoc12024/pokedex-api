@@ -20,7 +20,7 @@ body {
   border-radius: 10px;
   margin: 0 auto;
   padding: 0.8rem;
-  background: url("pokeball.jpg") no-repeat top center/cover;
+  background: url("./pokeball.jpg") no-repeat top center/cover;
   display: flex;
   flex-direction: column;
   box-shadow: rgba(36, 36, 37, 0.977) 0px 7px 29px 0px;
